@@ -1,0 +1,17 @@
+# Copyright (c) 2026 Texas Instruments Incorporated
+# Author: Siddharth Vadapalli <s-vadapalli@ti.com>
+# SPDX-License-Identifier: Apache-2.0
+
+description: TI AM62L CPSW MAC Address eFuse block
+
+compatible: "ti,am62l-cpsw-mac-efuse"
+
+properties:
+  reg:
+    required: true
+    type: array
+
+child-binding:
+  description: NVMEM cell identifying the 6-byte MAC address byte range.
+
+  include: fixed-layout.yaml
