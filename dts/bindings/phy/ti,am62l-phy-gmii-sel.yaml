@@ -1,0 +1,20 @@
+# Copyright (c) 2026 Texas Instruments Incorporated
+# Author: Siddharth Vadapalli <s-vadapalli@ti.com>
+# SPDX-License-Identifier: Apache-2.0
+
+description: TI AM62L CPSW MAC Port GMII (PHY) selection block
+
+compatible: "ti,am62l-phy-gmii-sel"
+
+include: phy-controller.yaml
+
+properties:
+  reg:
+    required: true
+    description: |
+      The CTRL MMR register for configuring the GMII block of the first
+      CPSW MAC Port. The registers for the second MAC Port and upwards
+      are offset by 0x4.
+
+  "#phy-cells":
+    const: 0
