@@ -53,4 +53,18 @@
 		clock-names = "fck";
 		status = "disabled";
 	};
+
+	cpsw_mac_efuse: efuse@43002000 {
+		compatible = "ti,am62l-cpsw-mac-efuse";
+		reg = <0x43002000 0x8>;
+
+		nvmem-layout {
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			cpsw_mac_addr0: mac-address@0 {
+				reg = <0x0 0x6>;
+			};
+		};
+	};
 };
