@@ -8,6 +8,7 @@ toolchain:
 ram: 2048
 supported:
   - adc
+  - netif:eth
   - uart
 testing:
   ignore_tags:
